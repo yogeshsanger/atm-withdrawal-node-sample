@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <script src="/js/jquery.js"></script>
+        <script src="/js/atm.js"></script>
+    </head>
+    <body>
+        <h1 style="width: 100%;text-align: center;font-size: 34px;padding: 22px 0;font-weight: bold;"><%= title %></h1>
+        <form action="javascript:void(0)" id="atm-form" onsubmit="ATM.submit(this)">
+            <div>
+                <label>Card Number:</label>
+                <input type="text" name="card_no" maxlength="16" autocomplete="off">
+            </div>
+            <div>
+                <label>PIN:</label>
+                <input type="password" name="pin">
+            </div>
+            <div>
+                <label>Amount:</label>
+                <input type="text" name="amount" autocomplete="off">
+            </div>
+            <div>
+                <label>Denomination (Optional):</label>
+                <select name="denomination" style="width: 62%;float: right;">
+                    <option value="">Select Denomination</option>
+                    <option value="1000">1000</option>
+                    <option value="500">500</option>
+                    <option value="200">200</option>
+                    <option value="100">100</option>
+                    <option value="50">50</option>
+                    <option value="20">20</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <input type="submit" value="Withdraw">
+        </form>
+    </body>
+</html>
